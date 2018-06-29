@@ -2,31 +2,125 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Currency Converter &middot; ALCWithGoogle3.0 #7DaysOfCodeChallenge</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/tailwind.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Sadiq Hassan, +2348060686834">
+    <title>NITP Exam Board Portal</title>
+    <link href="styles/semantic.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/pace.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/pace.min.js"></script>
+    <link href="images/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
+    <link href="images/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+    <link href="images/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+    <link href="images/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="images/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+    <link href="images/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="images/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+    <link href="images/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="images/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="images/icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png" />
+    <link href="images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="images/icons/manifest.json" rel="manifest" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#3498db">
 </head>
 
 <body>
-    <header>
-        <img src="images/logo.png" alt="currency converter logo" />
-        <h1>Currency converter</h1>
-    </header>
-    <div class="container">
-        <div class="panel_wrapper">
-            <input type="number" id="quantity" class="form-control" value="1">
-            <select name="from" id="from"></select>
-            <select name="to" id="to"></select>
-            <button id="conversion" class="btn btn-primary">convert</button>
-        </div>
-        <div id="conversion_of_one_unit" class="result">0</div>
-        <div class=" result " id="result">0</div>
-
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <a class="item active" href="./">Home</a>
     </div>
+
+    <div class="pusher" id="header">
+        <div class="ui container large secondary inverted menu">
+            <a class="toc item" id="menu_icon">
+                <img class="logo" src="images/logo.png" /> &nbsp;Currency Converter
+            </a>
+            
+            <div class="item">
+                <img class="logo" src="images/logo.png" /> &nbsp;Currency Converter
+            </div>
+
+            <div class="right item">
+                <a class="item active" href="./">Home</a>
+            </div>
+        </div>
+
+        <div class="ui vertical masthead segment">
+            <div class="ui container">
+                <div class="ui stackable grid">
+                    <div class="eight wide column">
+                        <div class="ui segment">
+                            <form class="ui small form" autocomplete="off" id="payment_form">
+                                <div class="field">
+                                    <div class="ui corner labeled input">
+                                        <input type="number" id="quantity" value="1">
+                                        <div class="ui corner label">
+                                            <i class="asterisk icon red"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui two fields">
+                                    <div class="field">
+                                        <div class="ui input">
+                                            <select class="ui fluid dropdown" id="from" name="from"></select>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui input">
+                                            <select class="ui fluid dropdown" id="to" name="to"></select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="large fluid ui submit button" id="conversion">
+                                    Convert
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="ui segment">
+                            <div id="conversion_of_one_unit" class="ui field result">0</div>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="ui segment">
+                            <div class="ui field result" id="result">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted grid">
+                <div class="eight wide column left aligned" id="tagLine">
+                    <span>&copy; Currency Converter.</span>
+                </div>
+
+                <div class="eight wide column right aligned" id="tagLine">
+                    <span>
+                        #7DaysOfCode for ALCWithGoogle3.0
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/semantic.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

@@ -1,59 +1,94 @@
-body {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
+/**
+ *
+ */
+
+#header {
+  background: url("../images/transparent.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-header {
-  height: calc(100px + 5vw);
-  background: #e74c3c;
-  color: #fff;
-  font-size: calc(30px + 1vw);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.hidden.menu {
+  display: none;
 }
-header img {
-  height: calc(40px + 5vw);
-  width: calc(40px + 5vw);
-  margin-right: 50px;
+
+.masthead.segment {
+  min-height: 47em;
 }
-.container {
-  width: 80%;
-  margin: calc(20px + 1vw) auto;
-  display: flex;
+
+.masthead .logo.item img {
+  margin-right: 1em;
 }
-select {
-  min-height: calc(10px + 8vh);
-  padding: 0 0 0 20px;
-  border: none;
-  background: #4285f4;
-  color: #fff;
-  font-size: calc(12px + 0.3vw);
-  outline: none;
-  margin: calc(5px + 0.2vw) 0 calc(5px + 0.2vw) 0;
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
 }
-select:hover {
-  box-shadow: 1px 1px 2px #efefef;
+
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
 }
-select option,
-input {
-  box-shadow: none;
-  outline: none;
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
 }
-input {
-  min-height: calc(25px + 0.8vw);
+
+.footer.segment {
+  padding: 1.5em 0em;
 }
-.panel_wrapper {
-  display: flex;
-  flex-direction: column;
+
+#welcome-header {
+  background-color: #0E6EB8;
 }
-.result {
-  background: #eee;
-  padding: 10px;
+
+#menu_icon {
+  display: none;
 }
-.container .result {
-  min-width: 200px;
-  padding: calc(10px + 0.5vw);
-  background: rgb(223, 249, 251);
-  justify-content: space-around;
-  margin: calc(10px + 0.5vw);
+
+.hiddenContent {
+  display: none;
+}
+
+.ui.action.input input[type="file"] {
+  display: none;
+}
+
+.image-preview {
+  display: none;
+  max-height: 250px;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.inverted.menu .item,
+  .secondary.inverted.menu .menu {
+    display: none;
+  }
+  .secondary.inverted.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 40em;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+  #tagLine {
+    text-align: center;
+  }
+  #menu_icon {
+    display: inline;
+  }
 }
