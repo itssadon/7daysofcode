@@ -17,12 +17,12 @@ You are required to implement a front-end application that takes advantage of th
 - All Javascript MUST be written in >=ES6
 - Use Github repository for version control.
 - Host a working version of the application on Github-Pages.
-- The application must make use of the following
-    Service Worker
-    Cache API
-    IndexedDB
+- The application must make use of the following:
+    - Service Worker
+    - Cache API
+    - IndexedDB
 
-* You are not to use any service worker library
+You are not to use any service worker library
 
 Submit your completed project at http://bit.ly/7daysofcode 
 
@@ -32,5 +32,6 @@ At minimum users should be able to:
 - Convert currencies while the application is online or offline
 
 ## API Specification
-[Base URL](https://www.currencyconverterapi.com)
-[Documentation](https://www.currencyconverterapi.com/docs)
+- [Base URL](https://www.currencyconverterapi.com)
+
+- [Documentation](https://www.currencyconverterapi.com/docs)
