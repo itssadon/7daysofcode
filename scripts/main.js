@@ -34,7 +34,7 @@ window.onload = () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
       .register('./sw.js')
-      .then(() => console.log('registered'));
+      .then(() => console.log('Service workder registered!'));
   }
   fetch('https://free.currencyconverterapi.com/api/v5/currencies')
     .then(response => response.json())
@@ -47,7 +47,7 @@ window.onload = () => {
     });
 };
 
-let conversionButton = document.getElementById('conversion');
+let conversionButton = document.getElementById('conversionBtn');
 
 // A function that return the code of a country from its name (which will be taken from the select)
 // e.g "Nigerian Naira" -> "NGN"
